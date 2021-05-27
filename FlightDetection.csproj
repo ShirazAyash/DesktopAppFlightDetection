@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E508556B-5781-4FB1-81AB-8393732C5C52}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlightDetection</RootNamespace>
+    <AssemblyName>FlightDetection</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OxyPlot, Version=2.0.0.0, Culture=neutral, PublicKeyToken=638079a8f0bd61e9, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="OxyPlot.Wpf, Version=2.0.0.0, Culture=neutral, PublicKeyToken=75e952ba404cdbb0, processorArchitecture=MSIL">
+      <HintPath>..\packages\OxyPlot.Wpf.2.0.0\lib\net45\OxyPlot.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="ReachFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Printing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\Dll.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\IModel.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\MinCircle.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\Model.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\UserControl1.g.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\UserControl1.g.i.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\View.g.i.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\Properties\AssemblyInfo.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\Properties\Resources.Designer.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\Properties\Settings.Designer.cs" />
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Circle_Alg\Circle_Alg\Circle_Alg\ViewModel.cs" />
+    <Compile Include="DashBoard.xaml.cs">
+      <DependentUpon>DashBoard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FullJoyStick.xaml.cs">
+      <DependentUpon>FullJoyStick.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GraphVal.xaml.cs">
+      <DependentUpon>GraphVal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GraphViewModel.cs" />
+    <Compile Include="IFlightClient.cs" />
+    <Compile Include="IFlightModel.cs" />
+    <Compile Include="JoyStickViewModel.cs" />
+    <Compile Include="Line_Alg_Dll\Dll.cs" />
+    <Compile Include="Line_Alg_Dll\IModel.cs" />
+    <Compile Include="Line_Alg_Dll\Model.cs" />
+    <Compile Include="Line_Alg_Dll\obj\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cs" />
+    <Compile Include="Line_Alg_Dll\obj\Debug\IModel.g.i.cs" />
+    <Compile Include="Line_Alg_Dll\obj\Debug\UserControl1.g.i.cs" />
+    <Compile Include="Line_Alg_Dll\obj\Debug\UserControl2.g.i.cs" />
+    <Compile Include="Line_Alg_Dll\obj\Debug\View.g.cs" />
+    <Compile Include="Line_Alg_Dll\obj\Debug\View.g.i.cs" />
+    <Compile Include="Line_Alg_Dll\Pearson.cs" />
+    <Compile Include="Line_Alg_Dll\Properties\AssemblyInfo.cs" />
+    <Compile Include="Line_Alg_Dll\Properties\Resources.Designer.cs" />
+    <Compile Include="Line_Alg_Dll\Properties\Settings.Designer.cs" />
+    <Compile Include="Line_Alg_Dll\View.xaml.cs">
+      <DependentUpon>View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Line_Alg_Dll\ViewModel.cs" />
+    <Compile Include="MyFlightClient.cs" />
+    <Compile Include="MyFlightModel.cs" />
+    <Compile Include="DashViewModel.cs" />
+    <Compile Include="FlightViewModel.cs" />
+    <Compile Include="Pearson.cs" />
+    <Compile Include="Slider.xaml.cs">
+      <DependentUpon>Slider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SliderViewModel.cs" />
+    <Page Include="Circle_Alg\Circle_Alg\Circle_Alg\UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DashBoard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FullJoyStick.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GraphVal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Line_Alg_Dll\View.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Slider.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.g.resources" />
+    <EmbeddedResource Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.Properties.Resources.resources" />
+    <EmbeddedResource Include="Circle_Alg\Circle_Alg\Circle_Alg\Properties\Resources.resx" />
+    <EmbeddedResource Include="Line_Alg_Dll\obj\Debug\Line_Alg.g.resources" />
+    <EmbeddedResource Include="Line_Alg_Dll\obj\Debug\Line_Alg.Properties.Resources.resources" />
+    <EmbeddedResource Include="Line_Alg_Dll\Properties\Resources.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Circle_Alg\Circle_Alg\.vs\Circle_Alg\v16\.suo" />
+    <None Include="Circle_Alg\Circle_Alg\.vs\Circle_Alg\v16\Server\sqlite3\db.lock" />
+    <None Include="Circle_Alg\Circle_Alg\.vs\Circle_Alg\v16\Server\sqlite3\storage.ide" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\Circle_Alg.csproj" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.csproj.CopyComplete" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.csproj.CoreCompileInputs.cache" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.csproj.GenerateResource.cache" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.csprojAssemblyReference.cache" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg_MarkupCompile.cache" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg_MarkupCompile.i.cache" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg_MarkupCompile.lref" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\UserControl1.baml" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\packages.config" />
+    <None Include="Circle_Alg\Circle_Alg\Circle_Alg\Properties\Settings.settings" />
+    <None Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Core.2.0.0\.signature.p7s" />
+    <None Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Core.2.0.0\OxyPlot.Core.2.0.0.nupkg" />
+    <None Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Wpf.2.0.0\.signature.p7s" />
+    <None Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Wpf.2.0.0\OxyPlot.Wpf.2.0.0.nupkg" />
+    <None Include="Line_Alg_Dll\.vs\Line_Alg\v16\.suo" />
+    <None Include="Line_Alg_Dll\Line_Alg.csproj" />
+    <None Include="Line_Alg_Dll\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="Line_Alg_Dll\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Line_Alg_Dll\obj\Debug\Line_Alg.csproj.CopyComplete" />
+    <None Include="Line_Alg_Dll\obj\Debug\Line_Alg.csproj.CoreCompileInputs.cache" />
+    <None Include="Line_Alg_Dll\obj\Debug\Line_Alg.csproj.GenerateResource.cache" />
+    <None Include="Line_Alg_Dll\obj\Debug\Line_Alg.csprojAssemblyReference.cache" />
+    <None Include="Line_Alg_Dll\obj\Debug\Line_Alg_MarkupCompile.cache" />
+    <None Include="Line_Alg_Dll\obj\Debug\Line_Alg_MarkupCompile.i.cache" />
+    <None Include="Line_Alg_Dll\obj\Debug\Line_Alg_MarkupCompile.lref" />
+    <None Include="Line_Alg_Dll\obj\Debug\View.baml" />
+    <None Include="Line_Alg_Dll\packages.config" />
+    <None Include="Line_Alg_Dll\packages\OxyPlot.Core.2.0.0\.signature.p7s" />
+    <None Include="Line_Alg_Dll\packages\OxyPlot.Core.2.0.0\OxyPlot.Core.2.0.0.nupkg" />
+    <None Include="Line_Alg_Dll\packages\OxyPlot.Wpf.2.0.0\.signature.p7s" />
+    <None Include="Line_Alg_Dll\packages\OxyPlot.Wpf.2.0.0\OxyPlot.Wpf.2.0.0.nupkg" />
+    <None Include="Line_Alg_Dll\Properties\Settings.settings" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\icons8-add-file-64.png" />
+    <Resource Include="Images\icons8-browse-folder-64.png" />
+    <Resource Include="Images\circle.png" />
+    <Resource Include="Images\clock.png" />
+    <Resource Include="Images\icons8-code-file-64.png" />
+    <Resource Include="Images\dll-64.png" />
+    <Resource Include="Images\icons8-fast-forward-64.png" />
+    <Resource Include="Images\icons8-geometric-flowers-64.png" />
+    <Resource Include="Images\import-csv.png" />
+    <Resource Include="Images\icons8-pause-button-64.png" />
+    <Resource Include="Images\play-64.png" />
+    <Resource Include="Images\icons8-play-button-circled-64.png" />
+    <Resource Include="Images\icons8-resume-button-64.png" />
+    <Resource Include="Images\icons8-rewind-64.png" />
+    <Resource Include="Images\icons8-right-button-64.png" />
+    <Resource Include="Images\box.png" />
+    <Resource Include="Images\icons8-slider-64.png" />
+    <Resource Include="Images\icons8-stop-64.png" />
+    <Resource Include="Images\xml-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WhatsApp Image 2021-04-14 at 18.40.50.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\backround.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg.sln" />
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg\bin\Debug\Circle_Alg.dll" />
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg\bin\Debug\Circle_Alg.pdb" />
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg\bin\Debug\OxyPlot.dll" />
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg\bin\Debug\OxyPlot.Wpf.dll" />
+    <Resource Include="Circle_Alg\Circle_Alg\Circle_Alg\bin\Debug\OxyPlot.Wpf.xml" />
+    <Resource Include="Circle_Alg\Circle_Alg\Circle_Alg\bin\Debug\OxyPlot.xml" />
+    <Resource Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.csproj.FileListAbsolute.txt" />
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.dll" />
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\Circle_Alg.pdb" />
+    <Content Include="Circle_Alg\Circle_Alg\Circle_Alg\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.dll" />
+    <Resource Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.xml" />
+    <Content Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Core.2.0.0\lib\netstandard1.0\OxyPlot.dll" />
+    <Resource Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Core.2.0.0\lib\netstandard1.0\OxyPlot.xml" />
+    <Resource Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Core.2.0.0\OxyPlot_128.png" />
+    <Content Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Wpf.2.0.0\lib\net45\OxyPlot.Wpf.dll" />
+    <Resource Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Wpf.2.0.0\lib\net45\OxyPlot.Wpf.xml" />
+    <Content Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Wpf.2.0.0\lib\netcoreapp3.0\OxyPlot.Wpf.dll" />
+    <Resource Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Wpf.2.0.0\lib\netcoreapp3.0\OxyPlot.Wpf.xml" />
+    <Resource Include="Circle_Alg\Circle_Alg\packages\OxyPlot.Wpf.2.0.0\OxyPlot_128.png" />
+    <Content Include="Line_Alg_Dll\bin\Debug\Line_Alg.dll" />
+    <Content Include="Line_Alg_Dll\bin\Debug\Line_Alg.pdb" />
+    <Content Include="Line_Alg_Dll\bin\Debug\OxyPlot.dll" />
+    <Content Include="Line_Alg_Dll\bin\Debug\OxyPlot.Wpf.dll" />
+    <Resource Include="Line_Alg_Dll\bin\Debug\OxyPlot.Wpf.xml" />
+    <Resource Include="Line_Alg_Dll\bin\Debug\OxyPlot.xml" />
+    <Content Include="Line_Alg_Dll\Line_Alg.sln" />
+    <Resource Include="Line_Alg_Dll\obj\Debug\Line_Alg.csproj.FileListAbsolute.txt" />
+    <Content Include="Line_Alg_Dll\obj\Debug\Line_Alg.dll" />
+    <Content Include="Line_Alg_Dll\obj\Debug\Line_Alg.pdb" />
+    <Content Include="Line_Alg_Dll\obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
+    <Content Include="Line_Alg_Dll\packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.dll" />
+    <Resource Include="Line_Alg_Dll\packages\OxyPlot.Core.2.0.0\lib\net45\OxyPlot.xml" />
+    <Content Include="Line_Alg_Dll\packages\OxyPlot.Core.2.0.0\lib\netstandard1.0\OxyPlot.dll" />
+    <Resource Include="Line_Alg_Dll\packages\OxyPlot.Core.2.0.0\lib\netstandard1.0\OxyPlot.xml" />
+    <Resource Include="Line_Alg_Dll\packages\OxyPlot.Core.2.0.0\OxyPlot_128.png" />
+    <Content Include="Line_Alg_Dll\packages\OxyPlot.Wpf.2.0.0\lib\net45\OxyPlot.Wpf.dll" />
+    <Resource Include="Line_Alg_Dll\packages\OxyPlot.Wpf.2.0.0\lib\net45\OxyPlot.Wpf.xml" />
+    <Content Include="Line_Alg_Dll\packages\OxyPlot.Wpf.2.0.0\lib\netcoreapp3.0\OxyPlot.Wpf.dll" />
+    <Resource Include="Line_Alg_Dll\packages\OxyPlot.Wpf.2.0.0\lib\netcoreapp3.0\OxyPlot.Wpf.xml" />
+    <Resource Include="Line_Alg_Dll\packages\OxyPlot.Wpf.2.0.0\OxyPlot_128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Circle_Alg\Circle_Alg\Circle_Alg\bin\Release\" />
+    <Folder Include="Line_Alg_Dll\bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
