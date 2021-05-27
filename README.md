@@ -89,7 +89,3 @@ Each feature also has his own ViewModel that connect between the view and the mo
 Each VireModel has the fuction NotifyPropertyChanged that sends information to the View.If there is a change in the view on the screen or a button was pushed the view tells the model via the viewModel about it.
 
 The model includes a client - this client connect between the Flight Gear Simulator and our app.
-You can see the *Data Binding* and the *Property Changed* connection in the UML.
-https://youtu.be/AGYCmEJU_LM
-[Demo of the app running]()
-Enjoy!
